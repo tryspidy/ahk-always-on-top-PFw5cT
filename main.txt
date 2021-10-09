@@ -1,0 +1,7 @@
+Winset,AlwaysOnTop,,A
+WinGetTitle, Name, A
+If (SubStr(Name, 1, 1) = "+")
+ Name:=Name := SubStr(Name, 3)
+else
+ Name:="+ " . Name ;chr(134) ;Identify which window has enabled this function 
+WinSetTitle, A, , %Name%
